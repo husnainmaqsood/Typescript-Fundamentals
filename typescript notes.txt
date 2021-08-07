@@ -1,0 +1,135 @@
+advantages of typescript:
+supports standard js code
+provide static typing(we have to tell the datatype)
+encapsulation(classes)
+support constructors
+define interfaces
+arrow functions
+intellisense and syntax checking
+tells us about some errors at compile time.
+
+typescript compiler is tsc
+we have to tell the compiler to compile this file, it transcompiles respective js code file, and we use that js file code.
+
+
+typescript is a superset of javascript
+
+follows {} to define code block
+semi colon to end the expressions
+
+important keywords:
+class, constructor, exports, extends, implements, imports, interface, module , namespace, public, private, ..., =>, <typeName>, :.
+
+in classes this is required in the case of classes
+
+we don't put function keyword before function in the classes 
+
+by default every attribute or method in a class is public.
+
+
+debugging becomes easy in typescript.
+
+in typescript static typing is optional
+type safety at compile time feature, but in js safety only on run time.
+
+
+
+
+declare is a special keyword in typescript that created ambient declarations.  
+
+var data: any;
+var info;
+both are of any type
+
+premitive types:
+var age: numbre = 2;
+var score = 98.25;
+var rating: number = 98.25;
+
+var hasData: boolean = true;
+var isReady = true;
+
+var firstName: string = 'Husnain';
+var lastName = 'Maqsood';
+
+
+Null type is a subtype of all premitives except void and undefined.
+
+var num: number = null;
+var str: string = null;
+var isHappy: boolean = null;
+var customer: {} = null;
+
+var age: number;
+var customer = undefined;
+
+undefined type is a subtype of all subtypes
+
+
+when there is no type, then any type will be inferred.
+
+
+putting !! before any varaiable turns it into boolean.
+
+
+interfaces are just for declaration, we don't implement things in these,
+we use the same format of interface and create objects of that format.
+at least all properties of interface should be implemented, we can also implement or add some additional properties in the interface.
+
+
+classes are just a container
+constructors are used to initialize fields
+when instance of class is created then constructor is called.
+
+
+we can wrap fields in properties
+
+we don't write function keyword before any method within the class.
+
+we only need function keyword outside the class.
+
+properties are in es5 feature, they are very convenient
+they don't work in all the browsers.
+
+for running es5 code in typescript
+user tsc --target es5 filename.ts
+
+
+modules help us keep seperation
+different things in different flies, 
+maintainable, reusable, testable
+
+
+namespace is a new keyword to make a module
+module dataservice {
+code
+}
+
+we can also make module without using module keyword or namespace keyword
+
+
+each module has specific role
+
+internal modules
+
+namespace modules: everything inside the module is accessible only, we have to use export keyword to access it outside the module.
+
+IIFE: immediately invoked function expression
+AMD (Asynchronous module definition) loads modules in proper sequence, that which module requires which module.
+
+
+modules are of two types
+internal(namespaces)
+external(modules)
+
+both are for organizing code
+
+when we want to export one item from a module, then we use default export
+
+compiling multiple files in tsc uses this
+tsc --target es5 filename.ts --outfile outputfilename.js
+
+node outputfilename.js
+
+creating tsconfig file:
+tsc --init
